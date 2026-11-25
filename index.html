@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiểm tra chẵn lẻ</title>
+</head>
+<body>
+  <input type="number" id="soNhap" placeholder="Nhập một số">
+  <button onclick="kiemTra()">Kiểm tra</button>
+  <p id="ketQua"></p>
+
+  <script>
+    function kiemTra() {
+      const so = Number(document.getElementById("soNhap").value);
+      const ketQua = document.getElementById("ketQua");
+
+      if (so % 2 === 0) {
+        ketQua.textContent = so + " là số chẵn";
+      } else {
+        ketQua.textContent = so + " là số lẻ";
+      }
+    }
+  </script>
+</body>
+</html>
